@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/lshiva/Current/test/Admiro/AdmiroSDK/Build/Products/Release-iphonesimulator/AdmiroSDK.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/lshiva/Current/test/Admiro/AdmiroSDK/Build/Intermediates.noindex/AdmiroSDK.build/Release-iphonesimulator/AdmiroSDK.build/unextended-module.modulemap",
+    }]
+  }]
+}

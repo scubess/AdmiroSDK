@@ -1,0 +1,9 @@
+version: "Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)"
+options: "9405b68d47c33a5fcea8d6bdb7f70e94"
+build_time: [1607331846, 672972000]
+inputs:
+  "/Users/lshiva/Current/test/Admiro/AdmiroSDK/AdmiroSDK/ADOverlayView.swift": [9223372036, 854775807]
+  "/Users/lshiva/Current/test/Admiro/AdmiroSDK/AdmiroSDK/ADCameraViewController.swift": [9223372036, 854775807]
+  "/Users/lshiva/Current/test/Admiro/AdmiroSDK/AdmiroSDK/ADExtensions.swift": [9223372036, 854775807]
+  "/Users/lshiva/Current/test/Admiro/AdmiroSDK/AdmiroSDK/ADVersion.swift": [9223372036, 854775807]
+  "/Users/lshiva/Current/test/Admiro/AdmiroSDK/AdmiroSDK/ADFaceDetection.swift": [9223372036, 854775807]

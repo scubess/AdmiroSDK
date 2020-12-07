@@ -1,0 +1,50 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AdmiroSDK
+import AVFoundation
+@_exported import AdmiroSDK
+import CoreImage
+import Foundation
+import Swift
+import UIKit
+import Vision
+public protocol ADCameraViewControllerDelegate : AnyObject {
+  func cameraViewController(didFocus point: CoreGraphics.CGPoint)
+  func cameraViewController(update status: AVFoundation.AVAuthorizationStatus)
+  func cameraViewController(captured image: UIKit.UIImage)
+}
+@objc @_inheritsConvenienceInitializers @available(iOS 11.0, *)
+open class ADCameraViewController : UIKit.UIViewController, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  public var preset: AVFoundation.AVCaptureSession.Preset
+  public var videoGravity: AVFoundation.AVLayerVideoGravity
+  public var lowLightBoost: Swift.Bool
+  public var tapToFocus: Swift.Bool
+  public var flashMode: AVFoundation.AVCaptureDevice.FlashMode
+  public var previewLayer: AVFoundation.AVCaptureVideoPreviewLayer?
+  weak public var ADcameraDelegate: AdmiroSDK.ADCameraViewControllerDelegate?
+  public var cameraPosition: AVFoundation.AVCaptureDevice.Position {
+    get
+    set
+  }
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewDidLayoutSubviews()
+  public func toggleFlash()
+  @objc public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
+  @objc public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didDrop sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@available(iOS 11.0, *)
+extension ADCameraViewController {
+  public func dimissed()
+}
+public class ADVersion {
+  public init()
+  public func sdk() -> Swift.String
+  @objc deinit
+}

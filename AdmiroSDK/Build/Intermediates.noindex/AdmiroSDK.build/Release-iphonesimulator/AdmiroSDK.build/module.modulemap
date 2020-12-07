@@ -1,0 +1,11 @@
+framework module AdmiroSDK {
+  umbrella header "AdmiroSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module AdmiroSDK.Swift {
+    header "AdmiroSDK-Swift.h"
+    requires objc
+}

@@ -1,0 +1,10 @@
+framework module AdmiroSDK {
+  umbrella header "AdmiroSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module AdmiroSDK.__Swift {
+    exclude header "AdmiroSDK-Swift.h"
+}
